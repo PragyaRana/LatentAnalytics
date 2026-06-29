@@ -18,4 +18,10 @@ plt.figure(figsize=(12, 6))
 plt.imshow(wordcloud, interpolation="bilinear")
 plt.axis("off")
 plt.title("India's Got Latent S2 EP1 Comment Word Cloud")
+
+plt.savefig(
+    "reports/wordcloud.png",
+    bbox_inches="tight"
+)
+
 plt.show()

@@ -37,3 +37,10 @@ st.subheader("Audience Sentiment")
 sentiment_counts = sentiment_df["sentiment"].value_counts()
 
 st.bar_chart(sentiment_counts)
+
+st.subheader("Word Cloud")
+
+st.image(
+    "reports/wordcloud.png",
+    use_container_width=True
+)
