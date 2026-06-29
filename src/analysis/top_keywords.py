@@ -3,8 +3,9 @@ from collections import Counter
 
 df = pd.read_csv("data/processed/clean_comments.csv")
 
-text = " ".join(df["clean_comment"].astype(str))
+df = df.dropna(subset=["clean_comment"])
 
+text = " ".join(df["clean_comment"])
 words = text.split()
 
 stopwords = {

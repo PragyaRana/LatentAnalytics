@@ -4,7 +4,9 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv("data/processed/clean_comments.csv")
 
-text = " ".join(df["clean_comment"].astype(str))
+df = df.dropna(subset=["clean_comment"])
+
+text = " ".join(df["clean_comment"])
 
 wordcloud = WordCloud(
     width=1000,
@@ -12,7 +14,7 @@ wordcloud = WordCloud(
     background_color="white"
 ).generate(text)
 
-plt.figure(figsize=(12,6))
+plt.figure(figsize=(12, 6))
 plt.imshow(wordcloud, interpolation="bilinear")
 plt.axis("off")
 plt.title("India's Got Latent S2 EP1 Comment Word Cloud")
