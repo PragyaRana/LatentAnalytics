@@ -47,3 +47,8 @@ print(df)
 
 print("\nCSV Saved Successfully!")
 print(os.path.abspath("data/exports/episodes.csv"))
+
+df["engagement_rate"] = (
+    (df["likes"] + df["comments"])
+    / df["views"]
+) * 100 
