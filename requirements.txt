@@ -1,0 +1,10 @@
+google-api-python-client
+python-dotenv
+pandas
+numpy
+matplotlib
+seaborn
+streamlit
+nltk
+wordcloud
+scikit-learn
